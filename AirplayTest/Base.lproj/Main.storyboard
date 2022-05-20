@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdT-XO-o7q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Not external-->
+        <scene sceneID="69G-29-NlV">
+            <objects>
+                <viewController id="axX-se-hBV" customClass="ViewController2" customModule="AirplayTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eaO-GH-YKw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsl-Qt-INp">
+                                <rect key="frame" x="110.5" y="432.5" width="193" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Open player (not external)"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="axX-se-hBV" eventType="touchUpInside" id="AIM-Lo-NdO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zu5-mh-WmE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xsl-Qt-INp" firstAttribute="centerY" secondItem="eaO-GH-YKw" secondAttribute="centerY" id="LFs-2s-Sva"/>
+                            <constraint firstItem="Xsl-Qt-INp" firstAttribute="centerX" secondItem="eaO-GH-YKw" secondAttribute="centerX" id="WJc-sK-xWb"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Not external" id="2Wg-1e-ixl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQB-d9-GoE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="265"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="bfM-Mq-g1H">
+            <objects>
+                <viewController id="qb6-p2-2ja" customClass="SettingsViewController" customModule="AirplayTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ImP-Be-1mh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3U0-gA-4nw">
+                                <rect key="frame" x="125" y="391.5" width="164" height="313.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQi-sn-CPL">
+                                        <rect key="frame" x="0.0" y="0.0" width="164" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Disable audio session"/>
+                                        <connections>
+                                            <action selector="toggleAudioSession" destination="qb6-p2-2ja" eventType="touchUpInside" id="UrF-3g-mxY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy2-YD-khQ">
+                                        <rect key="frame" x="0.0" y="31" width="164" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Change category"/>
+                                        <connections>
+                                            <action selector="changeCategory" destination="qb6-p2-2ja" eventType="touchUpInside" id="UZX-Et-frj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCL-KU-nLk">
+                                        <rect key="frame" x="0.0" y="62" width="164" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Override output"/>
+                                        <connections>
+                                            <action selector="overrideOutput" destination="qb6-p2-2ja" eventType="touchUpInside" id="8dw-E8-kKv"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pA2-e5-sbV">
+                                        <rect key="frame" x="0.0" y="93" width="164" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="e8Z-Xl-BHn">
+                                        <rect key="frame" x="0.0" y="113.5" width="164" height="200"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OTX-Dh-LzT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3U0-gA-4nw" firstAttribute="centerX" secondItem="ImP-Be-1mh" secondAttribute="centerX" id="muq-d4-c58"/>
+                            <constraint firstItem="3U0-gA-4nw" firstAttribute="centerY" secondItem="ImP-Be-1mh" secondAttribute="centerY" id="vcb-Y3-Zwd"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="cIy-Rt-YXN"/>
+                    <connections>
+                        <outlet property="audioSessionButton" destination="xQi-sn-CPL" id="H8h-TM-Inh"/>
+                        <outlet property="categoryButton" destination="Oy2-YD-khQ" id="rp5-Su-gbZ"/>
+                        <outlet property="overrideOutputButton" destination="rCL-KU-nLk" id="QJi-qq-pfs"/>
+                        <outlet property="stackView" destination="e8Z-Xl-BHn" id="ydR-rC-MHu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bC5-ZX-AAa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="922"/>
+        </scene>
+        <!--External-->
+        <scene sceneID="6Ms-s5-PV6">
+            <objects>
+                <viewController id="OiP-Eb-Eyu" customClass="ViewController" customModule="AirplayTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4T-E0-jdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnZ-V9-y3R">
+                                <rect key="frame" x="122.5" y="432.5" width="169" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Open player (External)"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="OiP-Eb-Eyu" eventType="touchUpInside" id="J8M-sr-y5b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8vi-LL-HBA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pnZ-V9-y3R" firstAttribute="centerY" secondItem="M4T-E0-jdQ" secondAttribute="centerY" id="Xte-On-H0u"/>
+                            <constraint firstItem="pnZ-V9-y3R" firstAttribute="centerX" secondItem="M4T-E0-jdQ" secondAttribute="centerX" id="frn-Os-H0u"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="External" id="3H0-4w-wKT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOt-LZ-b8V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="-342"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ugX-8z-4LR">
+            <objects>
+                <tabBarController id="kdT-XO-o7q" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pS5-0W-lEL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OiP-Eb-Eyu" kind="relationship" relationship="viewControllers" id="fDI-sW-ovJ"/>
+                        <segue destination="axX-se-hBV" kind="relationship" relationship="viewControllers" id="luW-Eo-gCV"/>
+                        <segue destination="qb6-p2-2ja" kind="relationship" relationship="viewControllers" id="GpB-el-i42"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8K2-Mx-Aox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="-38"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
